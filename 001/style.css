@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#gato{
+    height: 600px;
+    width: 1000px;
+    background-color: black;
+    clip-path: polygon(5% 100%, 5% 66.66%, 20% 0%, 30% 33.33%, 70% 33.33%, 80% 0%, 90% 66.66%, 90% 100%);
+}
+
+.olho{
+    height: 35%;
+    width: 22%;
+    background-color: white;
+    position: relative;
+    border-radius: 50%;
+}
+
+#olhoe{
+    top:54%;
+    left:20%;
+}
+
+#olhod{
+    top:19%;
+    left:55%;
+}
+
+.palpebra{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    top: -100%; /*100*/
+    animation: pisca 8s infinite;
+}
+
+.pupila{
+    background-color: black;
+    width: 50%; 
+    height: 70%;
+    border-radius: 50%;
+    position: relative;
+    top: 17%;  /*6*/
+    left: 25%; /*38*/
+    animation: mexeOlho 8s infinite;
+}
+
+@keyframes mexeOlho {
+
+    40%{
+        top: 17%;  /*6*/
+        left: 25%; /*38*/
+    }
+    50%{ /*olha para o lado*/
+        top: 6%;
+        left: 38%;
+    }
+
+    52%{
+        top: 6%;
+        left: 32%;
+    }
+    60%{ /*volta o olhar ao centro*/
+        top: 17%;  /*6*/
+        left: 25%; /*38*/
+    }
+}
+
+@keyframes pisca {
+    55%{
+        top:-100%;
+    }
+    60%{
+        top: 0%
+    }
+    63%{
+        top:-100%;
+    }
+}

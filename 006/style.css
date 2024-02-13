@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+:root{
+    --azulEscuro: #1A2A43;
+    --rosaClaro: #F2DFE4;
+    --rosaMedio: #CBB4B7;
+    --roxoEscuro: #362A49;
+    --cinza: #6F747F;
+    --azulMedio: #14405C;
+    --amareloEscuro: #C8B477;
+    --branco: white;
+    --preto: black
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circulo{
+    height: 600px;
+    width: 600px;
+    background-color: var(--azulEscuro);
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.nuvem{
+    height: 200px;
+    width: 800px;
+    background-color: transparent;
+}
+
+.bolinhasNuvem{
+    border-radius: 50%;
+    position: relative;
+}
+
+.bolinha1{
+    height: 120px;
+    width: 120px;
+}
+
+.bolinha2{
+    height: 70px;
+    width: 70px;
+    top: -50%;
+    left: 10%;
+}
+
+.bolinha3{
+    height: 100px;
+    width: 100px;
+    
+    top: -90%;
+    left: 17%;
+}
+
+.bolinha4{
+    height: 80px;
+    width: 80px;
+    top: -130%;
+    left: 25%;
+}
+
+.bolinha5{
+    height: 60px;
+    width: 60px;
+    top: -170%;
+    left: 30%
+}
+
+.bolinha6{
+    height: 150px;
+    width: 150px;
+    top: -215%;
+    left: 35%
+}
+
+.bolinha7{
+    height: 150px;
+    width: 150px;
+    top: -285%;
+    left: 50%
+}
+
+.bolinha8{
+    height: 70px;
+    width: 70px;
+    top: -350%;
+    left: 65%
+}
+
+.bolinha9{
+    height: 80px;
+    width: 80px;
+    top: -380%;
+    left: 70%
+}
+
+.bolinha10{
+    height: 150px;
+    width: 150px;
+    top: -440%;
+    left: 75%
+}
+
+.nuvem1{
+    background-color: var(--azulMedio);
+}
+
+.nuvem2{
+    background-color: var(--roxoEscuro);
+}
+
+.nuvem3{
+    background-color: var(--rosaMedio);
+}
+
+.nuvem4{
+    background-color: var(--rosaClaro);
+}
+
+.nuvem5{
+    background-color: var(--branco);
+}
+
+.nuvem6{
+    background-color: var(--rosaClaro);
+}
+
+.nuvem7{
+    background-color: var(--branco);
+}
+
+#nuvem1{
+    margin-top: 45%;
+    margin-left: -5%;
+}
+
+#nuvem2{
+    margin-top: -25%;
+    margin-left: -13%;
+}
+
+#nuvem3{
+    margin-top: -25%;
+}
+
+#nuvem4{
+    margin-top: -26%;
+    margin-left: -8% ;
+}
+
+#nuvem5{
+    margin-top: -25%;
+}
+
+#nuvem6{
+    margin-top: -25%;
+    margin-left: 5% ;
+}
+
+#nuvem7{
+    margin-top: -27%;
+    margin-left: -5% ;
+}
+
+#lua{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 90px;
+    border-radius: 50%;
+    border-color: black;
+}
+
+#ceuLua{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin-left: 11%;
+    background-color: var(--azulEscuro);
+}
+
+.estrela{
+    width: 20px;
+    height: 20px;
+    background-color: var(--amareloEscuro);
+    margin-left: 150px;
+    margin-top: 100px;
+    position: absolute;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: cresce 1s infinite;
+}
+
+#estrela1{
+    margin-top: 10%;
+    margin-left: 70%;
+    animation: cresce 1s infinite;
+}
+
+#estrela2{
+    margin-top: 20%;
+    margin-left: 60%;
+    animation: cresce 3s infinite;
+}
+#estrela3{
+    margin-top: 5%;
+    margin-left: 50%;
+    animation: cresce 2s infinite;
+}
+
+#estrela5{
+    margin-top: 40%;
+    margin-left: 55%;
+    animation: cresce 3s infinite;
+}
+#estrela6{
+    margin-top: 35%;
+    margin-left: 30%;
+    animation: cresce 2s infinite;
+}
+#estrela7{
+    margin-top: 43%;
+    margin-left: 70%;
+    animation: cresce 2s infinite;
+}
+#estrela8{
+    margin-top: 35%;
+    margin-left: 9%;
+    animation: cresce 1.4s infinite;
+}
+#estrela9{
+    margin-top: 38%;
+    margin-left: 85%;
+    animation: cresce 4s infinite;
+}
+#estrela10{
+    margin-top: 25%;
+    margin-left: 70%;
+    animation: cresce 5s infinite;
+}
+#estrela11{
+    margin-top: 21%;
+    margin-left: 40%;
+    animation: cresce 3s infinite;
+}
+
+@keyframes cresce {
+    50%{
+        width: 23px;
+        height: 24px;
+    }
+
+    100%{
+        width: 20px;
+        height: 20px;
+    }
+}

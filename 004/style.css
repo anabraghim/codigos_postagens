@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    --azulMedio:#3496AD;
+    --azulClaro: #B1DFEB;
+    --branco: #F1F9FB;
+    --preto: #0A0829;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--azulMedio);
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    overflow: hidden;
+}
+
+#corpo{
+    width: 600px;
+    height: 600px;
+    background-color: var(--branco);
+    border-radius: 50% 50% 0% 0%;
+}
+
+.orelha{
+    height: 25%;
+    width: 25%;
+    background-color: var(--branco);
+    border-radius: 50%;
+    position: relative;
+}
+
+#orelhad{
+    top: -25%;
+    left: 73.5%;
+}
+
+.olho{
+    width: 5%;
+    height: 5%;
+    background-color: var(--preto);
+    border-radius: 50%;
+    position: relative;
+}
+
+#olhoe{
+    top: -33%;
+    left: 40%;
+}
+
+#olhod{
+    top: -38%;
+    left: 56%;
+}
+
+#fucinho{
+    width: 30%;
+    height: 37.5%;
+    background-color: var(--azulClaro);
+    position: relative;
+    border-radius: 45%;
+    top: -35%;
+    left: 35%;
+}
+
+#nariz{
+    width: 55%;
+    height: 44%;
+    background-color: var(--preto);
+    position: relative;
+    border-radius: 50%;
+    top: 8%;
+    left: 22.5%;
+}
+
+#boca{
+    width: 30%;
+    height: 4%;
+    background-color: var(--preto);
+    border-radius: 25%;
+    position: relative;
+    top: 25%;
+    left: 35%;
+}
+
+.neve{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    top: 0%;
+    border-radius: 50%;
+}
+
+#n1{
+    left: 10%;
+    animation: caiNeve 5s infinite
+}
+
+#n2{
+    left: 15%;
+    animation: caiNeve 15s infinite
+}
+
+#n3{
+    left: 25%;
+    animation: caiNeve 10s infinite
+}
+
+#n4{
+    left: 28%;
+    animation: caiNeve 5s infinite
+}
+
+#n5{
+    left: 38%;
+    animation: caiNeve 18s infinite
+}
+
+#n6{
+    left: 49%;
+    animation: caiNeve 10s infinite
+}
+
+#n7{
+    left: 53%;
+    animation: caiNeve 5s infinite
+}
+
+#n8{
+    left: 54%;
+    animation: caiNeve 8s infinite
+}
+
+#n9{
+    left: 64%;
+    animation: caiNeve 7s infinite
+}
+
+#n10{
+    left: 70%;
+    animation: caiNeve 14s infinite
+}
+
+#n11{
+    left: 74%;
+    animation: caiNeve 8s infinite
+}
+
+#n12{
+    left: 82%;
+    animation: caiNeve 16s infinite
+}
+
+#n13{
+    left: 87%;
+    animation: caiNeve 12s infinite
+}
+
+#n14{
+    left: 90%;
+    animation: caiNeve 9s infinite
+}
+
+#n15{
+    left: 97%;
+    animation: caiNeve 5s infinite
+}
+
+@keyframes caiNeve {
+    100%{
+        top: 100%
+    }
+}
