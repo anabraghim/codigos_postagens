@@ -1,0 +1,137 @@
+:root{
+    --amarelo-escuro: #514e01;
+    --amarelo-claro: #eeea09;
+    --preto: black;
+    --roxo: #CC0097;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(3, 3, 3);
+}
+#rosto{
+    position: relative; /*fica na posição natural dele mas pode ser ajustado*/
+    height: 300px;
+    width: 300px;
+    background-color: var(--amarelo-claro);
+    border: 10px solid var(--preto);
+    border-radius: 50%;
+    animation: roda 15s linear infinite;
+    left: -15%;
+    top: 40%;
+    /* transform: rotate(180deg); */
+}
+
+.olho{
+    height: 35px;
+    width: 35px;
+    background-color: var(--preto);
+    position: relative;
+    border-radius: 50%;
+}
+
+#olhoEsquerdo{
+    left: 58%; /*58*/
+    top: 32%;    /*32 -> 62*/
+    animation: mexeOlhoE 15s infinite;
+}
+
+#olhoDireito{
+    left: 30%; /*30*/
+    top: 20.3%; /*20.3 -> 50.3*/
+    animation: mexeOlhoD 15s infinite;
+}
+
+#boca{
+    height: 160px;
+    width: 160px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    left: 20%;  /*20*/
+    border: 10px solid var(--preto);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    transform: rotate(-135deg);
+    animation: mexeBoca 15s infinite;
+}
+
+
+@keyframes roda {
+    0%{
+        transform: rotate(0deg);
+        left: -25%;
+    }
+
+    40%{
+        left: 60%;
+        transform: rotate(360deg);
+    }
+    60%{
+        left: 60%;
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+        left: -15%;
+    }
+}
+
+@keyframes mexeOlhoD {
+    0%{
+        left: 30%; /*30*/
+        top: 20.3%; /*20.3 -> 50.3*/
+    }
+    40%{
+        left: 30%; /*30*/
+        top: 20.3%; /*20.3 -> 50.3*/
+    }
+    60%{
+        left: 30%; /*30*/
+        top: 50.3%; /*20.3 -> 50.3*/
+    }
+    100%{
+        left: 30%; /*30*/
+        top: 50.3%; /*20.3 -> 50.3*/
+    }
+}
+
+
+@keyframes mexeOlhoE {
+    0%{
+        top: 32%;
+    }
+    40%{
+        top: 32%; 
+    }
+    60%{
+        top: 62%; 
+    }
+    100%{
+        top: 62%;
+    }
+}
+
+@keyframes mexeBoca {
+    0%{
+        top: 0;    /*0 -> -25*/
+    }
+    40%{
+        top: 0;    /*0 -> -25*/
+    }
+    60%{
+        top: -25%;    /*0 -> -25*/
+    }
+    100%{
+        top: -25%;    /*0 -> -25*/
+    }
+}

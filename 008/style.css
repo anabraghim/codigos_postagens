@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    --amareloClaro: #FDDC3B;
+    --amareloMedio: #FECF20;
+    --cinzaClaro: #DEDAD9;
+    --cinzaMedio: #958A84;
+    --cinzaEscuro: #3D3432;
+    --marromClaro: #AD5C33;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--amareloClaro);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+#minion{
+    position: relative;
+    height: 500px;
+    width: 500px;
+}
+
+.circulo{
+    border-radius: 50%;
+}
+
+.oculos{
+    position: absolute;
+    top: 10%;
+    width: 55%;
+    height: 55%;
+    background-color: var(--cinzaMedio);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#oculosd{
+    left: 47%;
+    z-index: -1;
+}
+
+.olho{
+    background-color: white;
+    height: 70%;
+    width: 70%;
+    top: 15%;
+    left: 15%;
+    overflow: hidden; 
+    position: absolute;
+}
+
+.pupila{
+    width: 20%;
+    height: 20%;
+    background-color: black;
+    border-radius: 50%;
+    border: 25px solid var(--marromClaro);
+    position: relative;
+    top: 30%;
+    left: 28%; 
+    animation: mexeOlho 5s infinite;
+}
+
+.palpebra{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background-color: var(--amareloClaro);
+    z-index: 2;
+} 
+
+.palpebraI{
+    top: 100%; /*60%*/
+    animation: mexePalpebraI 5s infinite;
+}
+
+.palpebraS{
+    animation: mexePalpebraS 5s infinite;
+    top: -70%; /*0%*/
+}
+
+.ferroOculos{
+    position: absolute;
+    height: 100px;
+    width: 50px;
+    background-color: var(--cinzaMedio);
+}
+
+#ferroOculosE{
+    top: 27.5%;
+    left: -4%;
+    border-left: 8px solid var(--cinzaClaro);
+}
+
+#ferroOculosD{
+    top: 27.5%;
+    left: 94.7%;
+    z-index: -1;
+    border-right: 8px solid var(--cinzaClaro);
+}
+
+.pernaOculos{
+    width: 20%;
+    height: 13%;
+    background-color: var(--cinzaEscuro);
+    position: absolute;
+}
+#pernaOculosE{
+    top: 30%;
+    left: -17%;
+}
+
+#pernaOculosD{
+    top: 30%;
+    left: 99.5%;
+    z-index: -1;
+}
+
+#boca{
+    width: 60%;
+    height: 20%;
+    position: absolute;
+    border: 6px solid var(--marromClaro);
+    border-color: var(--marromClaro) transparent transparent transparent;
+    top: 65%;
+    left: 19%;
+    transform: rotate(180deg);
+    border-radius: 50%;
+    animation: mexeBoca 5s infinite;
+}
+
+@keyframes mexeOlho {
+    20%{ 
+        transform: translate(-53px);
+    }
+
+    30%{
+        transform: translate(-53px);
+    }
+    50%{ 
+        transform: translate(0px);
+    }
+}
+
+@keyframes mexePalpebraI {
+    20%{
+        transform: translate(0px, -75px);
+    }
+
+    30%{
+        transform: translate(0px, -75px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes mexePalpebraS {
+    20%{
+        transform: translate(0px, 75px);
+    }
+    30%{
+        transform: translate(0px, 75px);
+    }
+    50%{
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes mexeBoca {
+    20%{
+        width: 40%;
+        border-radius: 0%;
+        left: 33%;
+    }
+    30%{
+        width: 40%;
+        border-radius: 0%;
+        left: 33%;
+    }
+    50%{
+        width: 60%;
+        border-radius: 50%;
+        left: 19%;
+    }
+}

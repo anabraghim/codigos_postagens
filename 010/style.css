@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+:root{
+    --azulEscuro: #00021b;
+    --verdeMedio: #39da09;
+    --azulMedio: #0400FF;
+    --amareloClaro: #ddd204;
+    --preto: #000217;
+    --cinzaClaro: #CDCDCD;
+    --branco: white;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--azulEscuro);
+    overflow: hidden;
+}
+
+#sol{
+    position: relative;
+    left: -600px;
+    height: 600px;
+    width: 600px;
+    background-color: var(--amareloClaro);
+    border-radius: 50%;
+    animation: mexeSol 7s infinite;
+    top: 8%;
+    z-index: -3;
+}
+
+#rostoSol{
+    position: relative;
+    left: 50%;
+    top: 23%;
+    height: 50%;
+    width: 50%;
+    animation: mexeRostoSol 7s infinite;
+}
+
+.olho{
+    height: 12%;
+    width: 12%;
+    background-color: var(--preto);
+    border-radius: 50%;
+    position: relative;
+}
+
+#olhoE{
+    left: 30%;
+    top: 37%;
+}
+
+#olhoD{
+    left: 60%;
+    top: 25%
+}
+
+#bocaSol{
+    height: 17%;
+    width: 20%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--branco);
+    position: relative;
+    left: 41.5%;
+    top: 30%;
+}
+
+@keyframes mexeSol {
+    100%{
+        transform: translate(3000px);
+    }
+}
+
+@keyframes mexeRostoSol {
+    5%{
+        left: 50%;
+    }
+    50%{
+        left: 0%;
+    }
+}
+
+#terra{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--azulMedio);
+    border-radius: 50%;
+    left: 650px;
+    top: 220px;
+    overflow: hidden;
+}
+
+.polo{
+    width: 100%;
+    height: 10%;
+    background-color: var(--branco);
+    position: relative;
+}
+
+.poloN{
+    top: -5%;
+}
+
+.poloS{
+    top: 85%;
+}
+
+.pedacoVerde{
+    background-color: var(--verdeMedio);
+    position: relative;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 30%;
+    height: 10%;
+}
+
+.p1{
+    width: 50%;
+    left: 20%;
+}
+
+.p2{
+    top: 10%;
+    width: 40%;
+}
+
+.p3{
+    top: 5%;
+    left: 50%;
+    width: 50%;
+}
+
+.p4{
+    top: 25%;
+    left: 30%;
+    width: 40%;
+}
+
+.p6{
+    left: 60%;
+    top: -12%;
+}
+
+#lua{
+    height: 60px;
+    width: 60px;
+    background-color: var(--cinzaClaro);
+    border-radius: 50%;
+    position: relative;
+    left: 500px;
+    top: -250px;
+    animation: mexeLua 2s linear infinite;
+}
+
+@keyframes mexeLua {
+    50%{
+        transform: translate(550px); /*550*/
+        z-index: 1;
+    }
+    51%{
+        z-index: -2;
+    }
+    100%{
+        transform: translate(0px); /*550*/
+        z-index: -2;;
+    }
+}

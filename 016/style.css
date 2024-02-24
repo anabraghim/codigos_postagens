@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    display:grid;
+    place-content: center;
+}
+
+li{
+    list-style: none;
+    z-index: -2;
+}
+
+.container{
+    background-color: white;
+    width: 100vw;
+    overflow: hidden;
+    z-index: -2;
+
+}
+
+.cachorros{
+    max-width: 3000px;  /*triplo do tamanho de um cachorro*/
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.cachorros ul{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    z-index: -2;
+    animation: 5s infinite slide linear;
+}
+
+.cachorros .cachorro{
+    width: 1000px; /*largura de um cachorro*/
+    height: 1000px; /*altura de um cachorro*/
+    background-color: white;
+    z-index: -2;
+
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1120px);
+    }
+}
+
+.cachorro{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 100px;
+    /* filter: grayscale(20%); */
+    
+}
+
+#corpo{
+    width: 800px;
+    height: 300px;
+    background-color:darkred;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    overflow: -moz-hidden-unscrollable;
+}
+
+#fucinho{
+    height: 70%;
+    width: 70%;
+    background-color: darkred;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    position: relative;
+    left: -25%;
+    top: 30%;
+}
+
+#bolinhaFucinho{
+    height: 100%;
+    width: 35%;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.rosto{
+    height: 200px;
+    width: 150px;
+    position: relative;
+    top: -60%;
+}
+
+.olho{
+    border-radius: 50%;
+    background-color: white;
+    width: 55px;
+    height: 55px;
+    position: relative;
+}
+
+.olhoE{
+    top: 12.5%;
+    left: 65%;
+}
+
+.olhoD{
+    top: -15%;
+    left: 35%;
+}
+
+.boca{
+    border-radius: 50%;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 60%;
+    top: 30%;
+}
+
+.coleira{
+    height: 100%;
+    width: 8%;
+    background-color: purple;
+    position: relative;
+    top: -136.6%;
+    left: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.orelha{
+    height: 90%;
+    width: 10%;
+    position: relative;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    animation: animaOrelha 2s linear infinite;
+}
+
+.orelhaE{
+    left: 23%;
+    top: -200%;
+    background-color: rgb(63, 1, 1);
+}
+
+@keyframes animaOrelha {
+    0%{
+        height: 90%;
+    }
+    50%{
+        height: 91%;
+    }
+    100%{
+        height: 90%;
+    }
+}
+
+.orelhaD{
+    left: 13%;
+    top: -295%;
+    background-color: rgb(25, 0, 0);
+    z-index: -1;
+}
+
+.bolinhasColeira{
+    background-color: rgb(222, 117, 11);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.pata{
+    height: 60%;
+    width: 4%;
+    background-color: black;
+    position: relative;
+    top: -400%;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    transform-origin: top;
+}
+
+.pata1{ /*superior direita*/
+    background-color: darkred;
+    top: -346%;
+    left: 40%;
+    z-index: -1;
+    animation: animaP3P1 2s linear infinite;
+}
+
+.pata2{ /*posterior direita*/
+    background-color: darkred;
+    top: -406%;
+    left: 73%;
+    z-index: -1;
+    animation: animaP2P4 2s linear infinite;
+}
+
+.pata3{ /*posterior esquerda*/
+    background-color: darkred;
+    top: -465%;
+    left: 75%;
+    animation: animaP3P1 2s linear infinite;
+
+}
+
+.pata4{ /*superior esquerda*/
+    background-color: darkred;
+    top: -525%;
+    left: 42%;
+    animation: animaP2P4 2s linear infinite;
+}
+
+@keyframes animaP2P4 { /*posterior direita e superior esquerda*/
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes animaP3P1 {
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+.pupila{
+    background-color: black;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    border-radius: 50%;
+    z-index: 10;
+    left: 8%;
+    top: 28%;
+    animation: animaPupila 5s linear infinite;
+}
+
+@keyframes animaPupila {
+    100%{
+        transform: translate(70%);
+    }
+}
+
+#rabo{
+    height: 60px;
+    width: 120px;
+    background-color: darkred;
+    position: relative;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+    left: 93%;
+    top: -640%;
+    transform-origin: left;
+    animation: 1s animaRabo linear infinite;
+}
+
+@keyframes animaRabo {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

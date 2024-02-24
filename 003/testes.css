@@ -1,0 +1,87 @@
+:root{
+    --amarelo-escuro: #141166;
+    --amarelo-claro: #DFCF08;
+    --preto: black;
+    --roxo: #6C1259;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--roxo), var(--amarelo-escuro));
+}
+#rosto{
+    position: relative; /*fica na posição natural dele mas pode ser ajustado*/
+    height: 300px;
+    width: 300px;
+    background-color: var(--amarelo-claro);
+    border: 10px solid var(--preto);
+    border-radius: 50%;
+    animation: roda 10s infinite;
+    left: -15%;
+    top: 40%;
+}
+
+.olho{
+    height: 35px;
+    width: 35px;
+    background-color: var(--preto);
+    position: relative;
+    border-radius: 50%;
+}
+
+#olhoEsquerdo{
+    left: 58%;
+    top: 32%;
+}
+
+#olhoDireito{
+    left: 30%;
+    top: 20.3%;
+}
+
+#containerBoca{
+    height: 80px;
+    width: 200px;
+    background-color: var(--amarelo-claro);
+    overflow: hidden;
+    position: relative;
+    top:33%;
+    left: 15%;
+}
+
+#boca{
+    height: 140px;
+    width: 160px;
+    background-color: var(--amarelo-claro);
+    border-radius: 50%;
+    position: relative;
+    left: 7%;
+    top: -100%;
+    border: 10px solid var(--preto);
+}
+
+
+@keyframes roda {
+    
+    0%{
+        transform: rotate(0deg);
+
+    }
+
+    50%{
+        left: 65%;
+        transform: rotate(360deg);
+    }
+
+    100%{
+        transform: rotate(0deg);
+        left: -15%;
+    }
+}
